@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="poem-display">
+    <h1 class="poem-title">{{ values["title"] }}</h1>
+    <h5 class="poem-author">por {{ values["author"] }}</h5>
+    <div class="poem">
+        {% for p in values["poem"] %}
+            {% if p != "" %}
+                <p class="poem-phrase">{{ p }}</p>
+            {% else %}
+                <p class="poem-empty-phrase">{{ p }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

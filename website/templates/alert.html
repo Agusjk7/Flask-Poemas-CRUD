@@ -1,0 +1,15 @@
+{% block alert %}
+
+{% if alert %}
+    <script>
+        Swal.fire({
+            position: "center",
+            icon: "{{ alert['icon'] }}",
+            text: "{{ alert['message'] }}",
+            showConfirmButton: true,
+            timer: 5000
+        })
+    </script>
+{% endif %}
+
+{% endblock alert %}
