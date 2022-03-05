@@ -9,7 +9,7 @@ document.querySelectorAll("#delete").forEach(button => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Eliminar",
             cancelButtonText: "Cancelar"
-          }).then(r => {
+        }).then(r => {
             if (r.isConfirmed) window.location.href = `/poema/${button.getAttribute("data-poem-id")}/delete`;
         });
     });

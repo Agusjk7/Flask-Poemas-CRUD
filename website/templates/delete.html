@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div class="form-container">
     <form class="form" autocomplete="off" action="/poema/{{ id }}/delete" method="POST">
         <input type="hidden" name="_METHOD" value="DELETE">
@@ -12,16 +11,9 @@
         </div>
         <div class="form-group">
             <label for="secret">Palabra Secreta*</label>
-            <input
-                type="password"
-                name="secret"
-                class="form-control"
-                id="secret"
-                placeholder="Palabra Secreta"
-            >
+            <input type="password" name="secret" class="form-control" id="secret" placeholder="Palabra Secreta">
         </div>
         <button type="submit" class="button btn btn-warning mt-5 mx-auto">Eliminar</button>
     </form>
 </div>
-
 {% endblock %}
